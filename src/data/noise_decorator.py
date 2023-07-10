@@ -53,12 +53,12 @@ def exclude_true_value(possible_noise_values, noise_value_probabilities, true_va
         del possible_noise_values[i]
         del noise_value_probabilities[i]
         sumatoria_de_probabilidad = sum(noise_value_probabilities)
-        normalized_noise_value_probabilities = \
+        noise_value_probabilities = \
             [probabilidad/sumatoria_de_probabilidad for \
                  probabilidad in noise_value_probabilities]
     except ValueError:
-        pass
-    return possible_noise_values, normalized_noise_value_probabilities
+        return 
+    return possible_noise_values, noise_value_probabilities
 
 if __name__ == "__main__":
     @anadir_ruido(0.5, {'ups!':0.7, 'UPS!':0.3})
