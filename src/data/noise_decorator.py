@@ -57,7 +57,7 @@ def exclude_true_value(possible_noise_values, noise_value_probabilities, true_va
             [probabilidad/sumatoria_de_probabilidad for \
                  probabilidad in noise_value_probabilities]
     except ValueError:
-        return 
+        pass
     return possible_noise_values, noise_value_probabilities
 
 if __name__ == "__main__":
